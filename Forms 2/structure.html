@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <link href="./style.css" type="text/css" rel="stylesheet"/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>School Admission Form </title>
+</head>
+<body>
+  <h1 class="color">School Admission Form</h1>
+
+    <!-- Main form --> 
+  <form class="same" action="#" method="post" enctype="multipart/form-data">
+
+    <fieldset>
+      <legend>Student Details</legend>
+
+      <label for="student_name">Full Name *</label><br>
+      <input type="text" id="student_name" name="student_name" required maxlength="100"><br><br>
+
+      <label for="dob">Date of Birth *</label><br>
+      <input type="date" id="dob" name="dob" required><br><br>
+
+      <label>Gender *</label><br>
+      <input type="radio" id="gender_m" name="gender" value="Male" required>
+      <label for="gender_m">Male</label>
+      <input type="radio" id="gender_f" name="gender" value="Female">
+      <label for="gender_f">Female</label>
+      <input type="radio" id="gender_o" name="gender" value="Other">
+      <label for="gender_o">Other</label>
+      <br><br>
+
+       <label for="address">Home Address *</label><br> 
+       <textarea id="address" name="address" rows="3" cols="40" required></textarea> 
+      <br><br>
+
+      <label for="photo">Upload Student Photo (jpg/png)</label><br>
+      <input type="file" id="photo" name="photo" accept="image/*">
+      <br><br>
+
+    </fieldset>
+
+    <fieldset>
+      <legend>Contact Information</legend>
+
+      <label for="phone">Phone (student / guardian) *</label><br>
+      <input type="tel" id="phone" name="phone" placeholder="03xx-xxxxxxx" pattern="[0-9+\-() ]{7,20}" required><br><br>
+
+      <label for="email">Email *</label><br>
+      <input type="email" id="email" name="email" placeholder="name@example.com" required><br><br>
+
+      <label for="alt_phone">Alternate Phone</label><br>
+      <input type="tel" id="alt_phone" name="alt_phone" pattern="[0-9+\-() ]{7,20}"><br><br>
+
+      <label for="emergency_contact">Emergency Contact (name &amp; phone) *</label><br>
+      <input type="text" id="emergency_contact" name="emergency_contact" required maxlength="100"><br><br>
+
+    </fieldset>
+
+    <fieldset>
+      <legend>Guardian / Parent Details</legend>
+
+      <label for="guardian_name">Guardian / Parent Name *</label><br>
+      <input type="text" id="guardian_name" name="guardian_name" required maxlength="100"><br><br>
+
+      <label for="guardian_relation">Relation to Student *</label><br>
+      <select id="guardian_relation" name="guardian_relation" required>
+        <option value="">-- Select --</option>
+        <option value="Father">Father</option>
+        <option value="Mother">Mother</option>
+        <option value="Guardian">Guardian</option>
+        <option value="Other">Other</option>
+      </select>
+      <br><br>
+
+      <label for="guardian_phone">Guardian Phone *</label><br>
+      <input type="tel" id="guardian_phone" name="guardian_phone" pattern="[0-9+\-() ]{7,20}" required><br><br>
+
+      <label for="guardian_email">Guardian Email</label><br>
+      <input type="email" id="guardian_email" name="guardian_email"><br><br>
+
+    </fieldset>
+
+    <fieldset>
+      <legend>Academic Information</legend>
+
+      <label for="prev_school">Previous School (if any)</label><br>
+      <input type="text" id="prev_school" name="prev_school" maxlength="150"><br><br>
+
+      <label for="grade">Grade Applying For *</label><br>
+      <input list="grades" id="grade" name="grade" required>
+      <datalist id="grades">
+        <option value="Playgroup">
+        <option value="Nursery">
+        <option value="KG">
+        <option value="1">
+        <option value="2">
+        <option value="3">
+        <option value="4">
+        <option value="5">
+        <option value="6">
+        <option value="7">
+        <option value="8">
+        <option value="9">
+        <option value="10">
+        <option value="11">
+        <option value="12">
+      </datalist>
+      <br><br>
+
+      <label for="preferred_shift">Preferred Shift</label><br>
+      <select id="preferred_shift" name="preferred_shift">
+        <option value="Morning">Morning</option>
+        <option value="Afternoon">Afternoon</option>
+      </select>
+      <br><br>
+
+      <label for="documents">Upload Documents (birth certificate, previous report card) — multiple allowed</label><br>
+      <input type="file" id="documents" name="documents[]" multiple accept="application/pdf,image/*"><br><br>
+
+    </fieldset>
+
+    <fieldset>
+      <legend>Medical / Other</legend>
+
+      <label for="medical">Medical Conditions / Allergies</label><br>
+      <textarea id="medical" name="medical" rows="3" cols="40" placeholder="If none, write 'None'"></textarea>
+      <br><br>
+
+      <label for="transport">Require School Transport?</label>
+      <input type="checkbox" id="transport" name="transport" value="yes">
+      <br><br>
+
+      <label for="pickup_person">Authorized Pickup Person (if different from guardian)</label><br>
+      <input type="text" id="pickup_person" name="pickup_person" maxlength="100">
+      <br><br>
+
+    </fieldset>
+
+    <fieldset>
+      <legend>Declarations</legend>
+
+      <input type="checkbox" id="agree" name="agree" required>
+      <label for="agree">I declare that the information provided is correct to the best of my knowledge.</label>
+      <br><br>
+
+      <label for="signature">Signature (type full name) *</label><br>
+      <input type="text" id="signature" name="signature" required maxlength="100">
+      <br><br>
+
+      <label for="date">Date *</label><br>
+      <input type="date" id="form_date" name="form_date" required value="">
+      <br><br>
+
+    </fieldset>
+
+    <button type="submit">Submit Application</button>
+    <button type="reset">Reset Form</button>
+
+  </form>
+
+  <p><small>Fields marked with * are required.</small></p>
+
+</body>
+</html>

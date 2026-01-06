@@ -1,0 +1,15 @@
+body{
+    background-color: rgb(235, 211, 211);
+    margin:auto;
+    width:500px;
+}
+.same{
+    background-color: rgb(250, 249, 249);
+    margin:auto;
+    padding:0;
+    width:500px;
+}
+.color{
+    background-color: rgb(255, 255, 255);
+    width:450px;
+}
